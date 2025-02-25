@@ -37,31 +37,35 @@ contactForm.addEventListener("submit", (e) => {
 
 
 //Buttons
-
 const btnLinkProfile = document.querySelector('.btn')
 
 btnLinkProfile.addEventListener('click', function () {
-    alert('Hello, this is a profile button!')
-    btnLinkProfile.style.backgroundColor = 'red'
+    const destino = document.getElementById("features");
+    if (destino) {
+        destino.scrollIntoView({ behavior: "smooth" });
+
+        // Desativa o botão temporariamente
+        btn.disabled = true;
+
+        setTimeout(() => {
+            btn.disabled = false; // Reativa após 2.5s
+        }, 2500);
+    }
 })
 
-const btnLinkProduct = document.getElementById('p1')
+const btnLinkProduct= document.querySelectorAll('.pd');
+btnLinkProduct.forEach(btn => {
+    btn.addEventListener('click', (event) => {
+        window.open('https://www.instagram.com/aprenda_seu_potencial/', '_blank');
+        btnLinkProduct.style.backgroundColor = 'blue'
+    });
+});
 
-btnLinkProduct.addEventListener('click', function () {
-    alert('Hello, this is a product button!')
-    btnLinkProduct.style.backgroundColor = 'blue'
-})
-
-const btnLinkProductTwo = document.getElementById('p2')
-
-btnLinkProductTwo.addEventListener('click', function () {
-    alert('Hello, this is a product button!')
-    btnLinkProductTwo.style.backgroundColor = 'blue'
-})
-
-const btnLinkProductTree = document.getElementById('p3')
-
-btnLinkProductTree.addEventListener('click', function () {
-    alert('Hello, this is a product button!')
-    btnLinkProductTree.style.backgroundColor = 'blue'
-})
+// Envia o Usuário para a Página de Compartilhar
+const btnLinkProfileInsta = document.querySelectorAll('.testimonial-btn');
+btnLinkProfileInsta.forEach(btn => {
+    btn.addEventListener('click', (event) => {
+        window.open('https://www.instagram.com/aprenda_seu_potencial/', '_blank');
+        btnLinkProfileInsta.style.backgroundColor = 'blue'
+    });
+});

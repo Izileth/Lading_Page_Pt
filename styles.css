@@ -85,6 +85,9 @@ p{
         margin: 0;
         padding: 0;
     }
+    .testimonial-cta{
+        justify-content: end;
+    }
     .testimonial-btn{
         margin: 0;
         padding: 0;
@@ -298,7 +301,7 @@ section {
 
 .card img{
     width: 100%;
-    height: auto;
+    height: max-content;
     object-fit: cover;
     margin-bottom: 0.4rem;
 }
@@ -326,6 +329,12 @@ section {
     display: flex;
     flex-direction: column;
 }
+.testimonial-cta{
+    height: auto;
+    display: flex;
+    width: 100%;
+}
+
 .testimonial-btn{
     background-color: var(--secundary-color);
     color: white;
@@ -342,6 +351,7 @@ section {
 
 .testimonial-btn:hover{
     background-color: transparent;
+    color: var(--primary-color);
     box-shadow: 0px 0px 30px #ddd;
 }
 
@@ -374,6 +384,8 @@ section {
     max-width: 600px;
     width: 100%;
     margin: 0 auto;
+    margin-block: 3.2rem;
+    border-radius: 6px;
 }
 /* Contact Form */
 
@@ -381,28 +393,37 @@ section {
     color: #ddd;
     margin-bottom: 1.5rem;
     padding-inline: 1.6rem;
-    margin-block: 1.6rem;
+    margin-block: 0.6rem;
 }
 
 .form-group label {
     display: block;
     color: #ddd;
     margin-bottom: 0.5rem;
+    border-radius: none;
+    font-size: 1.1rem;
+
 }
-.form-group input:active{
+.form-group input:focus{
     outline: none;
-    color: #ddd;
-    border: 1px solid #ddd;
+    box-shadow: 0px 0px 30px var(--secundary-color);
+    border: 1px solid var(--secundary-color);
+}
+.form-group textarea:focus{
+    outline: none;
+    box-shadow: 0px 0px 30px var(--secundary-color);
+    border: 1px solid var(--secundary-color);
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 0.9rem;
-    border: 1px solid #ccc;
-    border-radius: 0.25rem;
+    padding: 0.5rem;
+    border: none;
+    border-bottom: 1px solid #ccc;
     background-color: var(--card-bg);
     color: #ddd;
+    transition: all 0.3s ease;
 }
 
 .btn-submit{
