@@ -44,7 +44,10 @@
                 </ul>
             </div>
             <button class="menu-mobile-btn" id="menu-btn">
-                <i class="fas fa-bars-staggered"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="currentColor" class="bi bi-text-right" viewBox="0 0 16 16">
+                    <path id="hamburgerPath" fill-rule="evenodd" d="M6 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-4-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m4-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-4-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5"/>
+                    <path id="closePath" style="display:none;" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                </svg>
             </button>
             <div class="menu-mobile" id="menu-mobile">
                 <ul>
@@ -66,13 +69,13 @@
                     <div class="hero-info">
                         <h1>Potencial <span>Sem Limites</span></h1>
                         <p>Da Dor Nasce A Força, Da Fraqueza, O Dominío</p>
-                        <button class="btn-hero"  data-section="references">
+                        <button class="btn-hero" data-target="contact">
                             Saiba mais
                             <i class="fas fa-arrow-right"></i>
                         </button>
                     </div>
                     <div class="hero-actions">
-                        <a href="#" class="btn btn-primary">Quero Virar o Jogo ��</a>
+                        <a href="#contact" class="btn btn-primary">Quero Virar o Jogo ��</a>
                     </div>
                 </div>
             </div>
@@ -127,10 +130,7 @@
                 </div>
             </div>
         </section>
-
-        <article class="divider">
-            <div class="divider-content"></div>
-        </article>
+    
 
         <section id="products" class="products">
             <div class="bg-products">
@@ -154,10 +154,6 @@
                 </div>
             </div>
         </section>
-
-        <article class="divider">
-            <div class="divider-content"></div>
-        </article>
         
         <section class="references">
             <div class="bg-references">
@@ -202,10 +198,6 @@
                 </div>
             </div>
         </section>
-
-        <article class="divider">
-            <div class="divider-content"></div>
-        </article>
 
         <section class="references">
             <div class="bg-references__mtc">
@@ -354,11 +346,7 @@
                 </div>
             </div>
         </section>
-
-        <article class="divider">
-            <div class="divider-content"></div>
-        </article>
-
+        
         <section id="contact" class="contact">
             <div class="bg-contact">
                 <div class="contact-content">
@@ -427,10 +415,10 @@
                     <img src="./assets/profile/icon/icon_brand.jpeg" alt="Potencial Sem Limites" class="footer-logo">
                     <p class="slogan">Da dor nasce a força. Da fraqueza, o domínio. </p>
                     <div class="social-media">
-                        <a href="https://www.instagram.com/aprenda_seu_potencial/"" aria-label="Facebook"><i class="fab fa-facebook-square"></i></a>
-                        <a href="https://www.tiktok.com/@potencial_marco_zero" aria-label="Twitter"><i class="fab fa-twitter-square"></i></a>
-                        <a href="https://www.instagram.com/aprenda_seu_potencial/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.tiktok.com/@potencial_marco_zero" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/aprenda_seu_potencial/"" aria-label="Facebook" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                        <a href="https://www.tiktok.com/@potencial_marco_zero" aria-label="Twitter" target="_blank"><i class="fab fa-twitter-square"></i></a>
+                        <a href="https://www.instagram.com/aprenda_seu_potencial/" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@potencial_marco_zero" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
                 
@@ -438,11 +426,11 @@
                 <div class="footer-column quick-links">
                     <h3>Links Úteis</h3>
                     <ul>
-                        <li><a href="#">Início</a></li>
-                        <li><a href="#">Sobre Nós</a></li>
-                        <li><a href="#">Serviços</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contato</a></li>
+                        <li><a href="#hero">Início</a></li>
+                        <li><a href="#about">Sobre Nós</a></li>
+                        <li><a href="#references">Serviços</a></li>
+                        <li><a href="https://prismatic-cascaron-280156.netlify.app/">Blog</a></li>
+                        <li><a href="#contact">Contato</a></li>
                     </ul>
                 </div>
                 
@@ -479,16 +467,16 @@
             <div class="copyright-bar">
                 <p>&copy; 2024 - 2025 Potencial Sem Limites. Todos os direitos reservados.</p>
                 <div class="legal-links">
-                    <a href="#">Termos de Uso</a>
-                    <a href="#">Política de Privacidade</a>
+                    <a href="https://regal-bublanina-62b974.netlify.app/" target="_blank">Termos de Uso</a>
+                    <a href="https://dapper-duckanoo-e5190a.netlify.app/" target="_blank">Política de Privacidade</a>
                 </div>
             </div>
         </footer>
 
     </main>
 
-    <script src="./Js/Menu/menu.toggle.js"></script>
     <script src="./Js/Navigation/process.automatic.navigate.js"></script>
+    <script src="./Js/Menu/menu.toggle.js"></script>
     <script src="./Js/Form/process.form.js"></script>
     <script src="./Js/Form/process.form.newlestter.js"></script>
     <script src="./Js/Carousel/carouse.testmonial.js"></script>

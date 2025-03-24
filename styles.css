@@ -289,14 +289,18 @@ header {
     border: none;
     cursor: pointer;
     transition: var(--transition);
-    z-index: 1; /* Garante que o botão fique acima do menu */
+    z-index: 1;
 }
-.menu-mobile-btn a{
-    color: var(--primary-color);
+.menu-mobile-btn:hover {
+    transform: scale(1.1);
 }
 
-.menu-mobile-btn:hover {
-    color: var(--primary-color);
+.menu-mobile-btn svg {
+    transition: all 0.3s ease;
+}
+
+.menu-mobile-btn svg.active {
+    color: var(--primary-color); /* Cor quando ativo, se desejar */
 }
 
 /*Responsividade*/
@@ -307,6 +311,7 @@ header {
     
     .menu-mobile-btn {
         display: flex;
+        z-index: 1;
     }
 }
 /*Seção Hero*/

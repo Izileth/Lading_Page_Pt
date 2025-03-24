@@ -1,44 +1,39 @@
 document.addEventListener('DOMContentLoaded', function() {
     const menuBtn = document.getElementById('menu-btn');
+    const hamburgerPath = document.getElementById('hamburgerPath');
+    const closePath = document.getElementById('closePath');
+    const menuIcon = document.getElementById('menuIcon');
     const menuMobile = document.getElementById('menu-mobile');
-    const menuLinks = document.querySelectorAll('#menu-mobile ul li a');
-    
-    // Função para alternar o menu (abrir/fechar)
+
     function toggleMenu() {
-        menuMobile.classList.toggle('active');
+        // Alterna a visibilidade dos paths
+        const isMenuOpen = menuMobile.classList.toggle('active');
         
-        // Alterna o ícone do botão entre "bars" e "times"
-        const icon = menuBtn.querySelector('i');
-        if (menuMobile.classList.contains('active')) {
-            icon.classList.remove('fa-bars');
-            icon.classList.add('fa-times');
-            document.body.style.overflow = 'hidden'; // Impede o scroll da página
+        if (isMenuOpen) {
+            hamburgerPath.style.display = 'none';
+            closePath.style.display = 'block';
+            menuIcon.classList.add('active');
         } else {
-            icon.classList.remove('fa-times');
-            icon.classList.add('fa-bars');
-            document.body.style.overflow = ''; // Restaura o scroll da página
+            hamburgerPath.style.display = 'block';
+            closePath.style.display = 'none';
+            menuIcon.classList.remove('active');
         }
+
+        // Controla o scroll do body
+        document.body.style.overflow = isMenuOpen ? 'hidden' : '';
     }
-    
-    // Alterna o menu ao clicar no botão
+
+    // Adiciona evento de clique ao botão
     menuBtn.addEventListener('click', function(event) {
-        event.stopPropagation(); // Impede que o clique se propague para o documento
+        event.stopPropagation();
         toggleMenu();
     });
-    
-    // Fecha o menu ao clicar em um link
-    menuLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            if (menuMobile.classList.contains('active')) {
-                toggleMenu();
-            }
-        });
-    });
-    
-    // Fecha o menu ao clicar fora dele
+
+    // Fecha o menu ao clicar fora
     document.addEventListener('click', function(event) {
-        // Verifica se o menu está aberto e se o clique foi fora do menu
-        if (menuMobile.classList.contains('active') && !menuMobile.contains(event.target)) {
+        if (menuMobile.classList.contains('active') && 
+            !menuMobile.contains(event.target) && 
+            !menuBtn.contains(event.target)) {
             toggleMenu();
         }
     });
