@@ -1600,6 +1600,16 @@ header {
         width: 100%;
         padding: 1.5rem;
     }
+    .testimonial-item .description{
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.6rem;
+    }
+    .testimonial-item .description p{
+        text-align: left;
+    }
 
     .testimonial-item .image {
         width: 120px;
