@@ -1229,6 +1229,26 @@ header {
     text-align:right;
 }
 
+.references-info .rf-btns{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.2rem;
+}
+.references-info .rf-btns .rf-btn{
+    border-radius: 0px;
+    padding: 0.6rem 1.2rem;
+    background: transparent;
+    border: 0.2px solid #fff;
+    transition: all 0.3s ease;
+}
+.references-info .rf-btns .rf-btn:hover{
+    transform: translateY(-4px);
+    background-color: #fff;
+    color: #000;
+}
+
 /*Seção a Parte*/
 .references-info__apt{
     width: 100%;
@@ -1264,6 +1284,28 @@ header {
     margin-bottom: var(--margin-small);
     text-align:left;
 }
+
+.references-info__apt .rf-btns .rf-btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.2rem;
+}
+
+.references-info__apt .rf-btns .rf-btn{
+    border-radius: 0px;
+    padding: 0.6rem 1.2rem;
+    background: transparent;
+    border: 0.2px solid #fff;
+    transition: all 0.3s ease;
+}
+.references-info__apt .rf-btns .rf-btn:hover{
+    transform: translateY(-4px);
+    background-color: #fff;
+    color: #000;
+}
+
 /*Seção Referent*/
 .references-item {
     background-color: rgba(0, 0, 0, 0.6);
@@ -1360,6 +1402,21 @@ header {
     }
     .references-content {
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+    .references-content  .references-info .rf-btns .rf-btn{
+        border-radius: 0px;
+        padding: 0.4rem 0.8rem;
+        font-size: 0.7rem;
+        background: transparent;
+        border: 0.2px solid #fff;
+    }
+
+    .references-info__apt .rf-btns .rf-btn{
+        border-radius: 0px;
+        padding: 0.4rem 0.8rem;
+        font-size: 0.7rem;
+        background: transparent;
+        border: 0.2px solid #fff;
     }
 }
 
