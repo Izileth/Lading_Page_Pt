@@ -22,8 +22,8 @@
     --font-size-large:5.4rem;
     --font-size-xlarge: 3.2rem;
     --font-size-medium: 2.6rem;
-    --font-size-small: 1.6rem;
-    --font-size-tiny: 1.2rem;
+    --font-size-small: 1.4rem;
+    --font-size-tiny: 1.025rem;
     --line-height: 1.5;
     --font-weight-bold: 700;
     --font-weight-normal: 400;
@@ -1213,18 +1213,18 @@ header {
     margin-bottom: var(--margin-medium);
 }
 .references-info h2{
-    font-size: clamp(1.5rem, 4vw, var(--font-size-xlarge));
+    font-size: clamp(1.4rem, 4vw, var(--font-size-xlarge));
     font-weight: 700;
     margin-bottom: var(--margin-small);
 }
 
 .references-info span{
-    font-size: clamp(1.5rem, 4vw, var(--font-size-xlarge));
+    font-size: clamp(1.2rem, 4vw, var(--font-size-xlarge));
     font-weight: 500;
     margin-bottom: var(--margin-small);
 }
 .references-info p{
-    font-size: clamp(0.875rem, 2vw, var(--font-size-tiny));
+    font-size: clamp(1.2rem, 2vw, var(--font-size-small));
     margin-bottom: var(--margin-small);
     text-align:right;
 }
@@ -1269,18 +1269,18 @@ header {
     margin-bottom: var(--margin-medium);
 }
 .references-info__apt h2{
-    font-size: clamp(1.5rem, 4vw, var(--font-size-xlarge));
+    font-size: clamp(1.4rem, 4vw, var(--font-size-xlarge));
     font-weight: 700;
     margin-bottom: var(--margin-small);
 }
 
 .references-info__apt span{
-    font-size: clamp(1.5rem, 4vw, var(--font-size-xlarge));
+    font-size: clamp(1.6rem, 4vw, var(--font-size-xlarge));
     font-weight: 500;
     margin-bottom: var(--margin-small);
 }
 .references-info__apt p{
-    font-size: clamp(0.875rem, 2vw, var(--font-size-tiny));
+    font-size: clamp(1.2rem, 2vw, var(--font-size-small));
     margin-bottom: var(--margin-small);
     text-align:left;
 }
@@ -1305,6 +1305,15 @@ header {
     background-color: #fff;
     color: #000;
 }
+.references-content__apt .references-info__apt .references-item .description .btns {
+    display: flex;
+    width: 100%;
+    justify-content: space-between; /* Mantém o espaçamento entre os elementos */
+    align-items: center; /* Adiciona alinhamento vertical centralizado */
+    align-items: center;
+    margin-block: 1.2rem;
+}
+
 
 /*Seção Referent*/
 .references-item {
@@ -1318,7 +1327,7 @@ header {
     align-items: center;
     justify-content: center;
     border-radius: var(--border-radius);
-    padding: 1.5rem; /* Padding interno */
+    padding: 1.6rem; /* Padding interno */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     animation: slideUp 6s ease-in-out;
 }
@@ -1349,26 +1358,97 @@ header {
     margin-top: var(--margin-medium);
     text-align: center;
     font-size: clamp(0.875rem, 2vw, var(--font-size-tiny));
-    padding: 0 1rem;
+    padding: 2 0rem;
     width: 100%;
     margin-top: var(--margin-small);
 }
 .references-item .description  h3{
     font-size: clamp(1rem, 2vw, var(--font-size-xlarge));
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.6rem;
     font-weight: 600;
     text-align: left;
+    color: var(--accent-color);
 }
 .references-item .description span{
     font-size: clamp(1rem, 2vw, var(--font-size-xlarge));
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.6rem;
+    color: var(--accent-color);
     font-weight: 500;
 }
 .references-item .description  p{
-    font-size: clamp(0.875rem,var(--font-size-tiny));
+    font-size: clamp(0.275rem,var(--font-size-tiny));
     margin: 0;
     text-align: left;
+    color: var(--accent-color);
 }
+.references-item .btns {
+    display: flex;
+    width: 100%;
+    justify-content: space-between; /* Mantém o espaçamento entre os elementos */
+    align-items: center; /* Adiciona alinhamento vertical centralizado */
+    margin-block: 1.2rem;
+}
+
+.references-item .btns .rf-it-sc {
+    display: flex;
+    align-items: center;
+    align-items: center;
+    justify-content: space-around;
+    gap: 0.6rem;
+}
+
+.references-item .btns .rf-it-sc  a{
+    color: var(--accent-color);
+}
+
+.references-item .btns .rf-it-btn {
+    padding: 0.4rem 1.2rem;
+    border-radius: 0.14rem; /* Ajustei o border-radius para suavizar os botões */
+    font-size: 1.0rem;
+    color: var(--accent-color);
+    background-color: transparent;
+    border: 1px solid var(--accent-color); /* Adiciona borda aos botões */
+    transition: background-color 0.3s, color 0.3s; /* Efeito de transição */
+}
+
+.references-item .btns .rf-it-btn:hover {
+    background-color: var(--accent-color); /* Altera fundo ao passar o mouse */
+    color: #000; /* Muda a cor do texto ao passar o mouse */
+}
+
+.references-item .btns .rf-it-cp {
+    font-style: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.references-item .btns .rf-it-cp a {
+    font-style: normal;
+    color: #fff;
+    margin-left: 0.5rem; /* Adiciona um pequeno espaçamento entre o ícone e o texto */
+}
+
+/* Responsividade - em dispositivos menores */
+@media (max-width: 768px) {
+    .references-item .btns {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .references-item .btns .rf-it-sc {
+        flex-direction: row; /* Alinha os elementos dentro do rf-it-sc na vertical */
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .references-item .btns .rf-it-btn {
+        width: 100%; /* Faz os botões ocuparem toda a largura disponível */
+        text-align: center; /* Alinha o texto do botão ao centro */
+    }
+}
+
 /* Responsividade */
 
 /* Telas médias (tablets) */
@@ -1558,7 +1638,7 @@ header {
 .testimonial-item .description h3{
     color: var(--accent-color);
     font-size: clamp(1.25rem, 2vw, var(--font-size-medium));
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.6rem;
     font-weight: 600;
 }
 .testimonial-item .description p{
@@ -1566,6 +1646,7 @@ header {
     color: var(--accent-color);
     margin: 0;
     line-height: 1.5;
+    margin-top: 0.6rem;
 }
 
 .testimonial-item .description .underline{
